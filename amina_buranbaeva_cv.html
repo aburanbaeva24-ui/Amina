@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amina Buranbaeva — Curriculum Vitae | Geography & Spatial Science</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        forest: {
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* Dedicated Print Stylesheet for PDF Export */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .cv-container {
+                box-shadow: none !important;
+                border: none !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+            }
+            .section-card {
+                break-inside: avoid;
+            }
+            a {
+                text-decoration: none !important;
+                color: #0f172a !important;
+            }
+            .skill-bar-fill {
+                background-color: #15803d !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen py-4 sm:py-10 transition-colors duration-300">
+
+    <!-- Top Floating Navigation Toolbar (Hidden on Print) -->
+    <header class="no-print fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-5xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-2xl shadow-lg px-4 sm:px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-forest-700 dark:bg-emerald-400"></span>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wide">Academic & Research CV</span>
+        </div>
+
+        <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Dark Mode Toggle -->
+            <button id="themeToggleBtn" onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all text-xs font-semibold flex items-center space-x-1.5">
+                <i class="fa-solid fa-moon dark:hidden"></i>
+                <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
+                <span class="hidden sm:inline">Theme</span>
+            </button>
+
+            <!-- PDF Print Button -->
+            <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-forest-700 dark:hover:bg-forest-600 text-white text-xs sm:text-sm font-semibold shadow-md transition-all flex items-center space-x-2">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>Print / Save PDF</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Academic CV Sheet -->
+    <main class="cv-container max-w-5xl mx-auto mt-16 sm:mt-12 bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/80 dark:border-slate-800 overflow-hidden transition-colors duration-300">
+        
+        <!-- Header Accent Bar -->
+        <div class="h-2.5 bg-gradient-to-r from-slate-900 via-forest-800 to-emerald-600"></div>
+
+        <div class="p-6 sm:p-12 lg:p-14 space-y-10">
+
+            <!-- ACADEMIC HEADER -->
+            <header class="border-b border-slate-200 dark:border-slate-800 pb-8">
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                    <div class="space-y-2">
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+                            Amina Buranbaeva
+                        </h1>
+                        <p class="text-base sm:text-lg font-semibold text-forest-800 dark:text-emerald-400">
+                            Geography & Environmental Science Researcher | Spatial Data Analyst
+                        </p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                            Specializing in GIS modeling, satellite remote sensing, biogeographical analysis, and environmental impact frameworks. Experienced in applying quantitative computational methods to spatial environmental datasets.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contact Info Block -->
+                    <div class="flex flex-col gap-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium shrink-0">
+                        <div class="flex items-center space-x-2.5 bg-slate-50 dark:bg-slate-800/60 px-3 py-2 rounded-xl border border-slate-200/70 dark:border-slate-800">
+                            <i class="fa-solid fa-phone text-forest-700 dark:text-emerald-400 text-xs"></i>
+                            <a href="tel:+77026018011" class="hover:text-slate-900 dark:hover:text-white transition-colors font-semibold text-slate-800 dark:text-slate-200">+7 702 601 80 11</a>
+                        </div>
+                        <div class="flex items-center space-x-2.5 bg-slate-50 dark:bg-slate-800/60 px-3 py-2 rounded-xl border border-slate-200/70 dark:border-slate-800">
+                            <i class="fa-solid fa-envelope text-forest-700 dark:text-emerald-400 text-xs"></i>
+                            <a href="mailto:aburanbaeva24@gmail.com" class="hover:text-slate-900 dark:hover:text-white transition-colors font-semibold text-slate-800 dark:text-slate-200">aburanbaeva24@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-2.5 bg-slate-50 dark:bg-slate-800/60 px-3 py-2 rounded-xl border border-slate-200/70 dark:border-slate-800">
+                            <i class="fa-solid fa-location-dot text-forest-700 dark:text-emerald-400 text-xs"></i>
+                            <span class="text-slate-800 dark:text-slate-200">Kazakhstan / International Academic Mobility</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- TWO-COLUMN ACADEMIC LAYOUT -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                <!-- MAIN COLUMN: Technical Skills, Research & Education (8 cols) -->
+                <div class="lg:col-span-8 space-y-9">
+
+                    <!-- TECHNICAL & PROFESSIONAL COMPETENCIES -->
+                    <section class="section-card space-y-5">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-emerald-400 flex items-center space-x-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <i class="fa-solid fa-layer-group text-forest-700 dark:text-emerald-400 no-print"></i>
+                            <span>Technical & Professional Competencies</span>
+                        </h2>
+
+                        <div class="grid grid-cols-1 gap-4">
+
+                            <!-- Category 1: GIS & Remote Sensing -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center space-x-2">
+                                        <i class="fa-solid fa-map-location-dot text-forest-700 dark:text-emerald-400"></i>
+                                        <span>GIS & Remote Sensing</span>
+                                    </h3>
+                                    <span class="text-[11px] font-semibold text-forest-800 dark:text-emerald-400">Core Expertise</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    Advanced cartographic modeling, vector and raster processing, satellite image interpretation, Digital Elevation Models (DEM), and spatial interpolation across geographical environments.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-1">
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">QGIS</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">ArcGIS Pro</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Google Earth Engine</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Sentinel-2 / Landsat</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">NDVI Analysis</span>
+                                </div>
+                            </div>
+
+                            <!-- Category 2: Quantitative & Computational Methods -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center space-x-2">
+                                        <i class="fa-solid fa-chart-line text-forest-700 dark:text-emerald-400"></i>
+                                        <span>Quantitative & Computational Methods</span>
+                                    </h3>
+                                    <span class="text-[11px] font-semibold text-forest-800 dark:text-emerald-400">Data Analytics</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    Data cleaning, spatial statistics, geographical dataset manipulation, scripted plotting, and environmental indicator modeling using Python libraries.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-1">
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Python 3</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">GeoPandas</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Pandas / NumPy</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Matplotlib</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Statistical Analysis</span>
+                                </div>
+                            </div>
+
+                            <!-- Category 3: Fieldwork & Environmental Monitoring -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white flex items-center space-x-2">
+                                        <i class="fa-solid fa-flask text-forest-700 dark:text-emerald-400"></i>
+                                        <span>Fieldwork Methodology & Environmental Impact</span>
+                                    </h3>
+                                    <span class="text-[11px] font-semibold text-forest-800 dark:text-emerald-400">Field Protocols</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    In-situ soil and water quality sampling, hand-held GPS/GNSS survey plotting, ecological field mapping, and Environmental Impact Assessment (EIA) framework applications.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-1">
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Soil/Water Sampling</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">GNSS Surveying</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">EIA Frameworks</span>
+                                    <span class="px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[11px] font-semibold text-slate-700 dark:text-slate-300">Ecological Auditing</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- ACADEMIC PROJECTS & RESEARCH PROJECTS -->
+                    <section class="section-card space-y-4">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-emerald-400 flex items-center space-x-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <i class="fa-solid fa-microscope text-forest-700 dark:text-emerald-400 no-print"></i>
+                            <span>Academic Research Projects</span>
+                        </h2>
+
+                        <div class="space-y-4">
+                            <!-- Project 1 -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-1.5">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">Multispectral Land Cover & Vegetation Index Assessment</h3>
+                                    <span class="text-[11px] text-slate-500 font-medium">Remote Sensing Focus</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    Leveraged Sentinel-2 multispectral imagery within QGIS to construct Normalized Difference Vegetation Index (NDVI) models, tracking regional vegetation health, seasonal soil moisture trends, and land classification variations.
+                                </p>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-1.5">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">Spatial Climate Data Analytics via Python</h3>
+                                    <span class="text-[11px] text-slate-500 font-medium">Quantitative Analysis</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    Developed Python GeoPandas data cleaning and visualization pipelines to correlate historical regional precipitation datasets against agricultural yield metrics.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- EDUCATION -->
+                    <section class="section-card space-y-3">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-emerald-400 flex items-center space-x-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <i class="fa-solid fa-graduation-cap text-forest-700 dark:text-emerald-400 no-print"></i>
+                            <span>Higher Education</span>
+                        </h2>
+
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-2">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <div>
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">B.Sc. in Geography & Environmental Science</h3>
+                                    <p class="text-xs text-slate-500 font-medium">Department of Geography & Environmental Studies</p>
+                                </div>
+                                <span class="text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-200/80 dark:bg-slate-700 px-2.5 py-1 rounded-md w-fit">
+                                    In Progress (2022 – Present)
+                                </span>
+                            </div>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-300 pt-1">
+                                <span class="font-bold text-slate-800 dark:text-slate-200">Core Coursework:</span> Geographic Information Systems (GIS), Satellite Remote Sensing, Biogeography, Geomorphology, Environmental Impact Assessment, Quantitative Environmental Methods.
+                            </p>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- SIDEBAR COLUMN: Compact Academic Metadata & Background Details (4 cols) -->
+                <div class="lg:col-span-4 space-y-8">
+
+                    <!-- LANGUAGE PROFICIENCY -->
+                    <section class="section-card space-y-3">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-emerald-400 flex items-center space-x-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <i class="fa-solid fa-language text-forest-700 dark:text-emerald-400 no-print"></i>
+                            <span>Language Proficiency</span>
+                        </h2>
+
+                        <div class="space-y-2.5">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-slate-900 dark:text-white">English</span>
+                                    <span class="text-xs font-extrabold text-forest-700 dark:text-emerald-400">IELTS 7.0 Academic</span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 mt-0.5">Certified C1 Advanced Academic User</p>
+                            </div>
+
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-slate-900 dark:text-white">Kazakh</span>
+                                    <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Native</span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 mt-0.5">First Language</p>
+                            </div>
+
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-slate-900 dark:text-white">Russian</span>
+                                    <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Fluent</span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 mt-0.5">Bilingual Academic Fluency</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- COMPACT EMPLOYMENT HISTORY -->
+                    <section class="section-card space-y-3">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-emerald-400 flex items-center space-x-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <i class="fa-solid fa-briefcase text-forest-700 dark:text-emerald-400 no-print"></i>
+                            <span>Professional Activity</span>
+                        </h2>
+
+                        <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xs font-bold text-slate-900 dark:text-white">Part-Time Role (0.5 FTE)</h3>
+                                <span class="text-[10px] font-semibold text-slate-500">2024 – Present</span>
+                            </div>
+                            <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Concurrent part-time employment (20 hours/week) maintained alongside degree studies, reflecting task prioritization and time-management capabilities.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- COMPACT OVERVIEW & CORE ATTRIBUTES (De-emphasized Hobbies & Discipline) -->
+                    <section class="section-card space-y-3">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-emerald-400 flex items-center space-x-2 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <i class="fa-solid fa-circle-info text-forest-700 dark:text-emerald-400 no-print"></i>
+                            <span>Personal Discipline & Pursuits</span>
+                        </h2>
+
+                        <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                            <div class="flex items-start space-x-2">
+                                <i class="fa-solid fa-dumbbell text-forest-700 dark:text-emerald-400 mt-0.5 text-xs"></i>
+                                <div>
+                                    <span class="font-bold text-slate-800 dark:text-slate-200">Physical Conditioning:</span> Regular fitness and athletic gym routine fostering stamina and focus.
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fa-solid fa-music text-forest-700 dark:text-emerald-400 mt-0.5 text-xs"></i>
+                                <div>
+                                    <span class="font-bold text-slate-800 dark:text-slate-200">Piano Performance:</span> Long-term classical piano practice developing detail orientation and discipline.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="no-print bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 px-6 sm:px-12 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+            <span>Amina Buranbaeva — Academic CV</span>
+            <div class="flex items-center space-x-3">
+                <a href="tel:+77026018011" class="hover:text-slate-900 dark:hover:text-white font-medium">+7 702 601 80 11</a>
+                <span>•</span>
+                <a href="mailto:aburanbaeva24@gmail.com" class="hover:text-slate-900 dark:hover:text-white font-medium">aburanbaeva24@gmail.com</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.remove('light');
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+            } else {
+                document.documentElement.classList.add('light');
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+</body>
+</html>
